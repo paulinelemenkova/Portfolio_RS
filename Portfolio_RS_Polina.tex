@@ -1,0 +1,564 @@
+\documentclass[pdflatex,compress,8pt,
+	xcolor={dvipsnames,dvipsnames,svgnames,x11names,table},
+	hyperref={colorlinks = true,breaklinks = true, urlcolor = NavyBlue, breaklinks = true}]{beamer}
+\usetheme{Szeged}
+%\setbeamertemplate{background}[grid][step=1.5cm]
+
+\usecolortheme[named=Purple]{structure}
+%\useoutertheme{smoothtree}% tree smoothtree shadow default sidebar miniframes split infolines
+%\useinnertheme{rounded}% circles inmargin rounded rectangles
+
+ \setbeamertemplate{itemize item}{$\Rightarrow$}
+ \setbeamertemplate{itemize item}[double arrow]
+ %\setbeamertemplate{itemize items}[circle]
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{gensymb} % degree symbol
+\usepackage[super]{nth}
+\usepackage{amsmath}
+\usepackage{subfig}
+\usepackage{pifont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------------------------------------------------------------------------
+% *** START BIBLIOGRAPHY <<<
+% ----------------------------------------------------------------------------
+\usepackage[
+	backend=biber, 
+	style = numeric,
+%	style=apa,
+	maxbibnames=99,
+%	citestyle=authoryear,
+	citestyle=numeric,
+	giveninits=true,
+	isbn=true,
+	url=true,
+	natbib=true,
+%	sorting=ndymdt,
+	sorting=ydnt,
+	bibencoding=utf8,
+	useprefix=false,
+	language=auto, 
+	autolang=other,
+	backref=true,
+	backrefstyle=none,
+	indexing=cite,
+]{biblatex}
+\DeclareSortingTemplate{ndymdt}{
+  \sort{
+    \field{presort}
+  }
+  \sort[final]{
+    \field{sortkey}
+  }
+  \sort{
+    \field{sortname}
+    \field{author}
+    \field{editor}
+    \field{translator}
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort[direction=descending]{
+    \field{sortyear}
+    \field{year}
+    \literal{9999}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{month}
+    \literal{99}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{day}
+    \literal{99}
+  }
+  \sort{
+    \field{sorttitle}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=4,padchar=0]{volume}
+    \literal{9999}
+  }
+}
+
+\addbibresource{Valencia.bib}
+\renewcommand*{\bibfont}{\tiny} % \tiny \scriptsize \footnotesize
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+% ----------------------------------------------------------------------------
+% *** END BIBLIOGRAPHY <<<
+% ----------------------------------------------------------------------------
+% Путь к файлам с иллюстрациями
+\graphicspath{{figures}} % path to folder with Figures
+
+
+% ----------------------------------------------------------------------------
+% делать footnote \title[Short Title]{Long Title}
+\makeatletter
+\setbeamertemplate{footline}{%
+\leavevmode%
+\hbox{\begin{beamercolorbox}[wd=.24 \paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.01cm plus1fill,rightskip=.05cm]{author in head/foot}%
+            \usebeamerfont{title in head/foot}\insertshortauthor
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.76\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.05cm,rightskip=.15cm plus1fil]{title in head/foot}%
+        \usebeamerfont{title in head/foot}\insertshorttitle{}
+        \insertframenumber{} / \inserttotalframenumber \ \hspace*{2ex} 
+    \end{beamercolorbox}}%
+    \vskip0pt%
+}
+\makeatother
+
+% ----------------------------------------------------------------------------
+
+\title[Portfolio of my works in Remote Sensing (RS)]
+{Portfolio of my works in Remote Sensing (RS) \\ and cartographic data visualisation \\produced using Earth Observation (EO) data}
+
+\subtitle{\vspace*{0.5cm}(Satellite image processing \\
+DEM and terrain modelling \\ Mapping and modelling EO data)
+}
+
+\author{Polina Lemenkova}
+
+\date{December 21, 2023}
+
+\begin{document}
+\begin{frame}
+           \titlepage
+\end{frame}
+
+\section*{Outline}
+\begin{frame}
+           \tableofcontents
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}\frametitle{Summary}
+
+\begin{alertblock}{My Motivation}
+I have an MSc degree. I would like to obtain a PhD degree in order to continue my career in research and academia at the PhD level. 
+\end{alertblock}
+
+\begin{block}{Introduction}
+I intend to do PhD research on landscape reconstruction using applied geophysical and GIS skills (geoarchaeology). \\The position at University of Valencia perfectly corresponds to my skills and education background. 
+\end{block}
+
+\begin{block}{Research Objective}
+For my PhD research in University of Valencia, I will use my \textcolor{Green4}{practical technical skills} in geospatial/geophysical data processing, 3D modelling, visualization and \textcolor{Green4}{theoretical knowledge} of geomorphological and soil processes (sedimentation, accumulation of soil layers, erosion) as my educational background in geosciences
+\end{block}
+
+\begin{block}{Research Aims}
+During my PhD project I intend to do my task will include the following approaches: 
+\begin{enumerate}[\ding{46}]
+	\item geophysical data modelling, GIS \& RS data processing, mapping, illustrations
+	\item statistical data analysis and graphical plotting, data modelling and interpretation
+	\item research: writing journal articles, PhD dissertation, conference presentations
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\section{Education}
+
+\begin{frame}\frametitle{My Educational Background: MSc}
+\begin{minipage}[0.4\textheight]{\textwidth}
+\begin{columns}[T]
+\begin{column}{0.4\textwidth}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=5.0cm]{Fig_03.jpg}
+\end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\vspace{1em}
+\begin{alertblock}{Master of Science (MSc)}
+I have an MSc degree in Geo-Information Science for Earth Observation, awarded by joint Erasmus Mundus program funded by the EU Committee (2009-2011): as a joint degree of four universities: 
+\begin{itemize}
+	\item Lund University (Sweden), 
+	\item University of Southampton (UK), 
+	\item University of Twente (Netherlands),
+	\item University of Warsaw (Poland). 
+\end{itemize}
+\end{alertblock}
+\end{column}
+\end{columns}
+
+\begin{block}{Modules obtained during MSc (120 ECTS)}
+GIS for Environmental Modelling; Core Skills in GIS \& RS; Calibration \& Validation of EO Data; Risk Assessment; Physical Geography in Environmental Management, System Dynamics \& Analysis; Advanced GIS and Remote Sensing; Distributed Environmental Modelling; Biodiversity, Environmental Management and Policy.
+\end{block}
+
+\end{minipage}
+\end{frame}
+
+\begin{frame}\frametitle{My Educational Background: BSc}
+\begin{minipage}[0.4\textheight]{\textwidth}
+\begin{columns}[T]
+\begin{column}{0.4\textwidth}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=5.5cm]{Fig_04.jpg}
+\end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\vspace{1em}
+\begin{alertblock}{Bachelor of Science (BSc)}
+I have a BSc degree from the Faculty of Geography, Department of Cartography and Geoinformatics, Lomonosov Moscow State University (Russia, 1999-2004). 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=5.0cm]{Fig_05.jpg}
+\end{figure}
+
+\end{alertblock}
+\end{column}
+\end{columns}
+
+\begin{block}{Modules obtained during BSc}
+Cartography, mapping, applied geology, history (regional and World), applied physics, remote sensing, physical geography, environmental monitoring and soil studies, climate and landscape, etc. 
+\end{block}
+
+\end{minipage}
+\end{frame}
+
+\section{Contribution}
+\begin{frame}\frametitle{How can I contribute to the project on geoarchaeology, University of Valencia}
+
+\begin{alertblock}{Educational background}
+\begin{itemize}
+	\item Background in geophysics, physical geography and related fields: geoarchaeology and applied geology, triggers of land cover change, evolution of landscapes, general knowledge of soil processes;
+	\item Strong extensive experience in remote sensing data processing: satellite image classification, clustering, segmentation, analysis and interpretation;
+	\item Fieldwork experience on Crete Island, Greece (2010); archaeological excavations in Kissonerga, Cyprus (2013) and Russia (Pskov); mapping land cover changes;
+	\item Strong cartographic skills (print-quality maps, graphical plots and illustrations), aerial and satellite remote sensing.
+	\item Programming and scripting skills; console-based data processing: GRASS GIS, Generic Mapping Tools (GMT): statistical data analysis and modelling.
+\end{itemize}
+\end{alertblock}
+
+\begin{block}{Spatial Analysis}
+\begin{enumerate}[\ding{52}]
+	\item Strong practical experience in diverse GIS: QGIS, SAGA GIS, 
+Erdas Imagine, ENVI GIS, ArcGIS (ArcCatalog/Map/View/Globe), Idrisi, eCognition, GeoMedia.
+	\item To analyse landscape evolution, I will use my technical skills in GIS and RS.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\section{My skills in remote sensing (RS)}
+\subsection{My skills in RS and satellite image processing}
+\begin{frame}\frametitle{My technical skills in RS data processing}
+
+\begin{alertblock}{RS Data Analysis}
+High-resolution satellite images, LiDAR data and historical aerial photographs enable to reveal structures otherwise hidden from the eyes. I have sound experience in Remote Sensing (RS) and Earth Observation data analysis by scripts Python, R and GRASS. 
+\end{alertblock}
+
+\begin{examples}{}
+\small{
+\begin{enumerate}
+	\item \emph{R Libraries for Remote Sensing Data Classification by K-Means Clustering and NDVI Computation in Congo River Basin, DRC}. Appli. Sci. 2022; 12(24):12554. \href{https://doi.org/10.3390/app122412554}{DOI: 10.3390/app122412554}.
+	\item \emph{Image Segmentation of the Sudd Wetlands in South Sudan for Environmental Analytics by GRASS GIS Scripts}. Analytics. 2023; 2(3):745-780. \href{https://doi.org/10.3390/analytics2030040}{DOI: 10.3390/analytics2030040}.
+	\item \emph{Recognizing the Wadi Fluvial Structure and Stream Network in the Qena Bend of the Nile River, Egypt, on Landsat 8-9 OLI Images}, Information. 2023; 14(4):249: \href{https://doi.org/10.3390/info14040249}{DOI: 10.3390/info14040249}.
+	\item \emph{Multispectral Satellite Image Analysis for Computing Vegetation Indices by R in the Khartoum Region of Sudan, Northeast Africa}, Journal of Imaging. 2023; 9(5):98: \href{https://doi.org/10.3390/jimaging9050098}{DOI: 10.3390/jimaging9050098}.
+	\item \emph{Using open-source software GRASS GIS for analysis of the environmental patterns in Lake Chad, Central Africa}, 2023. Die Bodenkultur Journal of Land Management Food and Environment 74(1):49-64: \href{https://doi.org/10.2478/boku-2023-0005}{DOI: 110.2478/boku-2023-0005}.
+	\item \emph{Monitoring Seasonal Fluctuations in Saline Lakes of Tunisia Using Earth Observation Data Processed by GRASS GIS}. Land. 2023; 12(11):1995. \href{hhttps://doi.org/10.3390/land12111995}{10.3390/land12111995}
+
+\end{enumerate}
+}
+\end{examples}
+\end{frame}
+
+\subsection{RS data processing by GRASS GIS scripts for landscape analysis}
+\begin{frame}\frametitle{RS data processing by GRASS GIS scripts for landscape analysis}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=3.5cm]{Fig_11a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=4.0cm]{Fig_11b.jpg}}
+\end{figure}
+\footnotesize{Left: code written in GRASS GIS for image analysis. Right: image classification for 2013, 2015, 2021 and 2022.}
+
+\begin{alertblock}{Highlight}
+Experience in RS data analysis (Landsat 7 TM, 8-9 OLI/TIRS, Sentinel 2A, VHR SPOT, World Imagery). Examples of my research: image classification; clustering, computing vegetation indices for ecosystem monitoring. Analysis of human-environment interactions is essential for reconstructing landscape history (e.g., land cover/use changes).
+\end{alertblock}
+
+\begin{block}{Example}
+Paper: \emph{Computing Vegetation Indices from the Satellite Images Using GRASS GIS Scripts for Monitoring Mangrove Forests in the Coastal Landscapes of Niger Delta, Nigeria}, J. Mar. Sci. Eng., 11(4), 871: \href{https://doi.org/10.3390/jmse11040871}{DOI: 10.3390/jmse11040871}.
+\end{block}
+\end{frame}
+
+\section{My skills in programming}
+\subsection{Scripting and applied programming}
+\begin{frame}\frametitle{My GitHub repository with programming codes and scripts: \href{https://github.com/paulinelemenkova}{https://github.com/paulinelemenkova}}
+
+\begin{alertblock}{My skills in applied programming and scripting languages:}
+\begin{enumerate}[\ding{51}]
+	\item Python (Matplotlib, terra, Seaborn, NumPy, SciPy, Pandas and other libraries)
+	\item R (a wide variety of packages)
+	\item MATLAB and its open source analogue Octave language
+	\item AWK and pother Unix utilities for console-based data processing
+	\item Shell scripting in GMT and GRASS GIS syntax
+	\item Data converting, reprojecting and formatting by GDAL and PROJ.
+\end{enumerate}
+\end{alertblock}
+
+\begin{alertblock}{My skills in markup languages:}
+\begin{enumerate}[\ding{51}]
+	\item \LaTeX , \TeX . Compilers: Lua\LaTeX, Xe\LaTeX . HTML/CSS, XML, gedit, LyX document processor, Notepad++. 
+	\item Bibliographies: Bib\LaTeX, Biber, MakeIndex.
+	\item Strong experience in \LaTeX $=>$ submission of scientific papers
+\end{enumerate}
+\end{alertblock}
+
+\begin{alertblock}{My skills in standard Office suite:}
+\begin{enumerate}[\ding{51}]
+	\item Proficiency in Word, Excel, Access, PowerPoint for usual document processing.
+\end{enumerate}
+\end{alertblock}
+
+\end{frame}
+
+\subsection{Python for data analysis, spatial and statistical modelling}
+\begin{frame}\frametitle{I use Python for spatial and statistical data analysis and modelling}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=6.0cm]{Fig_10a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=4.5cm]{Fig_10b.jpg}}
+\end{figure}
+\footnotesize{Examples of my mapping DEM and graphical plotting using libraries of Python for spatial data analysis.}
+\normalsize
+
+\begin{alertblock}{Highlight}
+I use various libraries of Python for data analysis, modelling and visualization. I have experience in DEM modelling by library 'EarthPy' for terrain analysis (image left). I also worked with diverse libraries (Matplotlib, Seaborn, NumPy, Plotly) for statistical data visualization and various technique of plotting (image right). Python is a very useful tool in multi-disciplinary research applications, and I use it in my research. \end{alertblock}
+
+\begin{block}{Example}
+Example paper: \emph{Satellite Image Processing by Python and R Using Landsat 9 OLI/TIRS and SRTM DEM Data on Côte d’Ivoire, West Africa}, in: Journal of Imaging, 8(12), 317: \href{https://doi.org/10.3390/jimaging8120317}{DOI: 10.3390/jimaging8120317}.
+\end{block}
+\end{frame}
+
+\subsection{R language for terrain mapping}
+
+\begin{frame}\frametitle{R programming for terrain modelling (DEM, slope/aspect, relief hillshade)}
+% 2 картинки
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=6.0cm]{Fig_06a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=4.5cm]{Fig_06b.jpg}}
+\end{figure}
+
+\begin{alertblock}{Highlight}
+I have advanced skills in R: diverse packages for DEM modelling, satellite image processing, statistical data analysis and plotting. I apply R for geomorphological modelling and geospatial data analysis or topographically diverse surfaces.
+\end{alertblock}
+
+\begin{block}{Example}
+Example of my research based on R for data analysis and modelling: \emph{Tanzania Craton, Serengeti Plain and Eastern Rift Valley: mapping of geospatial data by scripting techniques}, in: Estonian Journal of Earth Sciences, 71(2), 61--79: \href{https://doi.org/10.3176/earth.2022.05}{DOI: 10.3176/earth.2022.05}.
+\end{block}
+\end{frame}
+
+\subsection{Geomorphic cross-sections by MATLAB/Octave language}
+\begin{frame}\frametitle{MATLAB/Octave programming for geomorphological modelling}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=3.0cm]{Fig_07a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=5.0cm]{Fig_07b.jpg}}
+\end{figure}
+
+\begin{alertblock}{Highlight}
+Skills in MATLAB/Octave scripting languages for geomorphological modelling (slope terrace cross-section profiles), visualization of main features in complex terrane landforms.
+\end{alertblock}
+
+\begin{block}{Example}
+This example is taken from paper: \emph{AWK and GNU Octave Programming Languages Integrated with Generic Mapping Tools for Geomorphological Analysis}, in: GeoScience Engineering, 65(4), 1--22): \href{https://doi.org/10.35180/gse-2019-0020}{DOI: 10.35180/gse-2019-0020}.
+\end{block}
+\end{frame}
+
+\section{My skills in geophysics}
+\subsection{Technical skills in geophysical data processing}
+\begin{frame}\frametitle{My technical skills in geophysical data processing}
+
+\begin{alertblock}{Geophysical Data Analysis}
+I worked in \emph{Schmidt Institute of Physics of the Earth, RAS, Dept. of Natural Disasters, Anthropogenic Hazards and Seismicity of the Earth. Lab. of Regional Geophysics and Natural Disasters} $=>$ 
+
+I have a strong hands-on experience in geophysical methods and theoretical background in processes related to soil properties and inner structure of the Earth. 
+
+To characterise land structures, I model data by applied geophysical methods using my strong experience in engineering geology and built environment. 
+\end{alertblock}
+
+\begin{examples}{}
+\tiny{
+\begin{enumerate}
+	\item \emph{Ultrasonic P- and S-Wave Reflection and CPT Soundings for Measuring Shear Strength in Soil Stabilized by Deep Lime/Cement Columns in Stockholm Norvik Port}. Archives of Acoustics, 48(3), 325-346. \href{https://doi.org/10.24425/aoa.2023.145243}{DOI: 10.24425/aoa.2023.145243}.
+	\item \emph{Dynamics of Strength Gain in Sandy Soil Stabilised with Mixed Binders Evaluated by Elastic P-Waves during Compressive Loading}. Materials 15(21):7798, 2022. \href{https://doi.org/10.3390/ma15217798}{DOI: 10.3390/ma15217798}.
+	\item \emph{Coherence of Bangui Magnetic Anomaly with Topographic and Gravity Contrasts across Central African Republic}, Minerals, 13(5), 604: \href{https://doi.org/10.3390/min13050604}{DOI: 10.3390/min13050604}.
+	\item \emph{Simplex Lattice Design and X-ray Diffraction for Analysis of Soil Structure: A Case of Cement-Stabilised Compacted Tills Reinforced with Steel Slag and Slaked Lime}, Electronics, 11(22):3726, 2022: \href{https://doi.org/10.3390/electronics11223726}{DOI: 10.3390/electronics11223726}.
+	\item \emph{Shear bond and compressive strength of clay stabilised with lime/cement jet grouting and deep mixing: A case of Norvik, Nynäshamn}, Nonlinear Engineering 11(1):693-710, 2022: \href{https://doi.org/10.1515/nleng-2022-0269}{DOI: 10.1515/nleng-2022-0269}.
+	\item \emph{Seismic monitoring of strength in stabilized foundations by P-wave reflection and downhole geophysical logging for drill borehole core}. Journal of the Mechanical Behavior of Materials, 32(1), 2023, 20220290. \href{https://doi.org/10.1515/jmbm-2022-0290}{10.1515/jmbm-2022-0290}
+
+\end{enumerate}
+}
+\end{examples}
+\end{frame}
+
+\subsection{Topographic 3D modelling by GMT scripting toolset}
+\begin{frame}\frametitle{Topographic 3D modelling by GMT scripting toolset}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=4.5cm]{Fig_08a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=4.5cm]{Fig_08b.jpg}}
+\end{figure}
+\footnotesize{Examples of my 3D mapping of Japan Archipelago and terrain grid using ETOPO2 data and GMT.}
+\normalsize
+
+\begin{alertblock}{Highlight}
+I can map 3D and perspective plots by GMT scripting for visualization of the terrain. I use various data: GEBCO/SRTM and ETOPO1 grids for geomorphological mapping. 
+\end{alertblock}
+
+\begin{block}{Example}
+\small{Full paper: \emph{Quantitative Morphometric 3D Terrain Analysis of Japan Using Scripts of GMT and R}, in: Land, 12(1), 261: \href{https://doi.org/10.3390/land12010261}{DOI: 10.3390/land12010261}.}
+\end{block}
+\end{frame}
+
+\subsection{Landslide mapping for risk assessment and hazard modelling: Austria}
+\begin{frame}\frametitle{Landslide mapping for risk assessment and hazard modelling: Austria}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=3.5cm]{Fig_13a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=3.5cm]{Fig_13b.jpg}}
+			\vspace{1mm}
+		\subfloat {\includegraphics[width=3.5cm]{Fig_13c.jpg}}
+\end{figure}
+\footnotesize{Examples of my mapping in ArcGIS using DEM and data on landslide distribution for risk assessment.}
+\normalsize
+
+\begin{alertblock}{Highlight}
+The study aim was to define zones at risks of landslides using data on mountain geoarchaeology and identified landslides in the Waidhofen a.d.Ybbs region, Lower Austria. We estimated economic damages caused by landslides, detected elements at risk with the 100-meter buffer area surrounding all landslides and did hazard risk mapping using ArcGIS. 
+\end{alertblock}
+
+\begin{block}{Example}
+\small{Paper: \emph{Economic Assessment of Landslide Risk for the Waidhofen a.d. Ybbs Region, Alpine Foreland, Lower Austria}, in: \nth{11} Int'l Symp. Landslides \& the \nth{2} North American Symp. Landslides \& Engineered Slopes. Protecting Society through Improved Understanding, Banff, AB, Canada (2012). Proceedings, pp. 279--285: \href{https://doi.org/10.6084/m9.figshare.7434230}{DOI: 10.6084/m9.figshare.7434230}.}
+\end{block}
+\end{frame}
+
+\subsection{Modelling cross-sections by GMT for analysis of slope steepness}
+\begin{frame}\frametitle{Modelling cross-sections by GMT for analysis of slope steepness}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=3.5cm]{Fig_09a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=4.7cm]{Fig_09b.jpg}}
+\end{figure}
+\footnotesize{Examples of my modelling of the cross-section profiles using GMT.}
+\normalsize
+
+\begin{alertblock}{Highlight}
+I can map cross-sections by GMT to visualise a complex sequence of terraces and deposits including ancient layers in structural terraces. It is useful for analysis of landscape dynamics from buried fill terraces to present. Cross-sections can be used for modelling the effects of erosion, floodplains or hydrological analysis of river valleys. 
+\end{alertblock}
+
+\begin{block}{Example}
+\small{Example paper: \emph{Variations in the bathymetry and bottom morphology of the Izu-Bonin Trench modelled by GMT}, in: Bulletin of Geography. Physical Geography Series, 18(1), 41--60: \href{https://doi.org/10.2478/bgeo-2020-0004}{DOI: 10.2478/bgeo-2020-0004}.}
+\end{block}
+\end{frame}
+
+\section{My skills in data science}
+\subsection{Statistical data analysis}
+\begin{frame}\frametitle{Statistical data modelling and analysis}
+
+\begin{alertblock}{Statistical Analysis}
+My skills in statistical analysis include a variety of data modelling techniques using tabular data format (processing tables): plotting histograms, box plots, QQ quantiles, regression analysis, cluster analysis (dendrograms, data grouping, k-means), ANOVA, correlation matrices, PCA, density curves KDE, 3D scatter plots, pie charts, etc. 
+\end{alertblock}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=3.0cm]{Fig_14a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=3.0cm]{Fig_14b.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=3.5cm]{Fig_14c.jpg}}
+\end{figure}
+\footnotesize{Examples of my plotting using libraries of Python and R for data analysis (here: submarine geoarchaeology analysed by cross-section profiles).}
+
+\begin{examples}{Paper:}
+\small{\emph{Statistical Analysis of the Mariana Trench geoarchaeology Using R Programming Language}, Geodesy and Cartography, 45(2), 57--84: \href{https://doi.org/10.3846/gac.2019.3785}{DOI: 10.3846/gac.2019.3785}.}
+\end{examples}
+\end{frame}
+
+\section{Publications}
+\begin{frame}\frametitle{Publications: academic contribution to the University of Valencia}
+
+\begin{alertblock}{I will contribute to the University of Valencia with my publications: planned co-authorship and active participation in writing papers)}
+\small{\begin{enumerate}[\ding{213}]
+	\item I have a strong publication record and experience in publishing scientific papers. 
+	\item I have strong skills in academic writing: planning research, logical structure and organising papers, performing related tasks (literature review, flowcharts, data analysis, visualization and mapping, description of results). Advanced skills in \alert{\LaTeX}
+	\item The most of my journal articles are published in journals indexed in \alert{Scopus/WoS} (several more are in review or accepted and will be published soon).
+	\item My papers are publicly available in open access mode on \href{https://www.researchgate.net/profile/Polina-Lemenkova-2}{ResearchGate}, \href{https://ulb.academia.edu/PolinaLemenkova}{Academia.edu}, \href{https://scholar.google.com/citations?user=As7apVQAAAAJ&hl=en}{Google Scholar} and other research-related websites with academic reputation. 
+	\item To promote papers, I retweet them in Twitter and post on Facebook. Such sharing helps to improve metrics, gain citations, attract more social feedback, and have a greater impact. 
+	\item Selected examples of my recent publications are in the end of this presentation (pp.16-17).
+\end{enumerate}}
+\end{alertblock}
+
+\begin{block}{Soft skills:}
+\small{\begin{enumerate}[\ding{91}]
+	\item Motivation for cross-disciplinary research: geophysics + remote sensing + GIS + archaeology  
+	\item Working in international and multi-disciplinary teams with different educational backgrounds.
+	\item Time management skills: attention to deadlines, multi-task regime, reviewers' comments.
+	\item Experienced reviewer myself (WoS ID: R-8828-2018).
+\end{enumerate}}
+\end{block}
+\end{frame}
+
+\section{Thanks}
+\begin{frame}{Thanks}
+  	\centering \LARGE 
+	\emph{Thank you for attention !}\\
+\vspace{1em}
+
+\small{\alert{Summary of my strong points for the project}:
+\begin{enumerate}[\ding{51}]
+	\item Strong technical skills in mapping, remote sensing (geophysics, signal processing, DEM, LiDAR, 3D modelling), spatial and statistical data analysis: Python, R, GIS. 
+	\item Geographic background (MSc) with practical knowledge of geophysics (non-destructive testing of soil properties, applied geological engineering) and landscape formation.
+	\item Fieldwork experience (volunteer archeologist) in Cyssonegra (Cyprus) and Vybuty (Russia) with practical experience of archeological excavations (non-destructive testing of soil properties, applied geological engineering) and landscape formation.
+	\item Strong publication record to actively participate in University of Valencia publications as a co-author. Willinness to participate in academic conferences with presentations / posters.
+\end{enumerate}
+}
+\vspace{1em}
+\normalsize{I hope that my skills in GIS / geophysics and research experience in landscape analysis \\
+will be beneficial for the project and I could start my PhD in \\University of Valencia. }
+
+\end{frame}
+
+
+%%%%%%%%%%% Bibliography %%%%%%%
+\section{Bibliography}
+\Large{Bibliography}
+\nocite{*}
+%\bibliographystyle{plain}
+%\bibliographystyle{vancouver}
+\printbibliography[heading=none]
+	
+%%%%%%%%%%% Bibliography %%%%%%%	
+
+\end{document}
+%Changing the font size locally (from biggest to smallest):	
+%\Huge
+%\huge
+%\LARGE
+%\Large
+%\large
+%\normalsize (default)
+%\small
+%\footnotesize
+%\scriptsize
+%\tiny
+
+\end{document}
