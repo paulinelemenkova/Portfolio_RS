@@ -17,8 +17,10 @@
 \usepackage{gensymb} % degree symbol
 \usepackage[super]{nth}
 \usepackage{amsmath}
-\usepackage{subfig}
 \usepackage{pifont}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{caption}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ----------------------------------------------------------------------------
@@ -139,19 +141,23 @@ DEM and terrain modelling \\ Mapping and modelling EO data
 
 \begin{alertblock}{Professional background}
 \begin{itemize}
-	\item Background in RS, image processing, applied geophysics and physical geography. Knowledge in natural sciences: applied geology, landscape analysis, geomorphology, climate-related issues, environmental analysis and monitoring.
+	\item Background in RS, image processing, applied geophysics and physical geography, geology, climate-related issues, environmental analysis and monitoring.
 	\item Strong extensive experience in RS data processing: satellite image classification, clustering, segmentation, analysis and interpretation; 
-	\item Images I worked with: Landsat 7 TM/ETM+, 8-9 OLI/TIRS (NASA/USGS), Sentinel-2A (Copernicus satellite missions), VHR SPOT (Satellite Pour l’Observation de la Terre), World Imagery, Pléiades-1A and 1B products of ESA. 
-	\item Strong cartographic skills (print-quality maps, graphical plots and illustrations), aerial and satellite remote sensing.
-	\item Programming and scripting skills; console-based RS data and image processing: GRASS GIS, Generic Mapping Tools (GMT): Python and R both for image processing and statistical analysis, modelling and visualization.
+	\item Satellite images I worked with: Landsat 7 TM/ETM+, 8-9 OLI/TIRS (NASA/USGS), Sentinel-2A (Copernicus satellite missions), VHR SPOT, World Imagery, Pléiades-1A and 1B products of ESA. 
+	\item Strong cartographic skills (print-quality maps, graphical plots and illustrations).
+	\item Programming and scripting skills; console-based data processing: Python and R for image processing and statistical analysis, modelling and visualization.
 \end{itemize}
 \end{alertblock}
 
 \begin{block}{Software skills}
 \begin{enumerate}[\ding{52}]
-	\item Strong practical experience in diverse GIS: GRASS GIS, GMT, QGIS, SAGA GIS, 
-Erdas Imagine, ENVI GIS, ArcGIS (ArcCatalog/Map/View/Globe), Idrisi, eCognition, GeoMedia.
+	\item Strong practical experience in GIS: GRASS GIS, GMT, QGIS, SAGA GIS, 
+Erdas Imagine, ENVI GIS, ArcGIS, Idrisi, eCognition, GeoMedia.
 \end{enumerate}
+\end{block}
+
+\begin{block}{Example}
+Examples of my works and links to papers with DOI are in the following slides.
 \end{block}
 \end{frame}
 
@@ -195,6 +201,38 @@ Segmentation the Landsat 8-9 OLI/TIRS image of Sudd area (South Sudan) with vari
 
 \begin{block}{Example}
 Source: \emph{Image Segmentation of the Sudd Wetlands in South Sudan for Environmental Analytics by GRASS GIS Scripts}, Analytics, 2(3), 745--780): \href{https://doi.org/10.3390/analytics2030040}{DOI: 10.3390/analytics2030040}.
+\end{block}
+
+\end{frame}
+%---------------<
+
+
+
+
+
+
+
+%--------------->
+\subsection{Parametric classification}
+\begin{frame}\frametitle{Parametric classification in image segmentation using eCognition}
+
+Estimation of object parameters for object based image analysis (OBIA) using multi-scale segmentation of data derived from the satellite images with varied parameters and scale. 
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=3.5cm]{eCog_1.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=3.7cm]{eCog_2.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=3.6cm]{eCog_3.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=3.6cm]{eCog_4.jpg}}
+\end{figure}
+\footnotesize{Examples of the VHR Pléiades ESA archive image processing using eCognition: a case of Brussels, Belgium.}
+
+\begin{block}{Example}
+Source: \emph{Topology, Homogeneity and Scale Factors for Object Detection: Application of eCognition Software for Urban Mapping using Multispectral Satellite Image}, INSO2015 Proceedings: \href{ 	
+https://doi.org/10.48550/arXiv.1901.00726}{DOI: 10.48550/arXiv.1901.00726}.
 \end{block}
 
 \end{frame}
@@ -287,9 +325,6 @@ RS data analysis for analysis of vegetation state and ecosystem monitoring, e.g.
 
 \end{frame}
 %---------------<
-
-
-
 %--------------->
 \subsection{Image classification}
 \begin{frame}\frametitle{Image classification and quality assessment}
@@ -313,40 +348,57 @@ RS data processing by GRASS GIS scripts for landscape analysis using k-means clu
 
 \end{frame}
 %---------------<
+%--------------->
+\subsection{Sequential pattern recognition}
+\begin{frame}\frametitle{Sequential pattern recognition}
 
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=6.0cm]{Chad_1.jpg}}
+			\vspace{1mm}
+		\subfloat {\includegraphics[width=6.0cm]{Chad_2.jpg}}
+		\vspace*{-3mm}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-\section{My skills in remote sensing (RS)}
-\subsection{My skills in RS and satellite image processing}
-\begin{frame}\frametitle{My technical skills in RS data processing}
-
-\begin{alertblock}{RS Data Analysis}
-High-resolution satellite images, LiDAR data and historical aerial photographs enable to reveal structures otherwise hidden from the eyes. I have sound experience in Remote Sensing (RS) and Earth Observation data analysis by scripts Python, R and GRASS. 
+\begin{alertblock}{Highlight}
+Unsupervised automatic classification techniques for RS data processing using “i.maxlik” GRASS GIS module: analysis of lake shrinkage during recent decade. 
 \end{alertblock}
 
-\begin{examples}{}
-\small{
-\begin{enumerate}
-	\item \emph{Multispectral Satellite Image Analysis for Computing Vegetation Indices by R in the Khartoum Region of Sudan, Northeast Africa}, Journal of Imaging. 2023; 9(5):98: \href{https://doi.org/10.3390/jimaging9050098}{DOI: 10.3390/jimaging9050098}.
-	\item \emph{Using open-source software GRASS GIS for analysis of the environmental patterns in Lake Chad, Central Africa}, 2023. Die Bodenkultur Journal of Land Management Food and Environment 74(1):49-64: \href{https://doi.org/10.2478/boku-2023-0005}{DOI: 110.2478/boku-2023-0005}.
+\begin{block}{Example}
+\emph{Using open-source software GRASS GIS for analysis of the environmental patterns in Lake Chad, Central Africa}, 2023. Die Bodenkultur Journal of Land Management Food and Environment 74(1):49-64: \href{https://doi.org/10.2478/boku-2023-0005}{DOI: 110.2478/boku-2023-0005}.
+\end{block}
 
-\end{enumerate}
-}
-\end{examples}
 \end{frame}
+%---------------<
+%--------------->
+\subsection{Multi-source RS data processing}
+\begin{frame}\frametitle{Multi-source geospatial data analysis: satellite and aerial images, maps}
 
+\begin{alertblock}{RS Data Analysis}
+Overlay of high-resolution satellite images, maps and historical aerial photographs enables to reveal land cover structures otherwise hidden from the eyes. 
+\end{alertblock}
 
-\section{My skills in programming}
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=6.2cm]{khartum_1.jpg}}
+			\vspace{1mm}
+		\subfloat {\includegraphics[width=4.5cm]{khartum_3.jpg}}
+		\vspace*{-3mm}
+\end{figure}
+
+\begin{alertblock}{Highlight}
+Different parameters of RS data enables to adjust scale-depending mapping. 
+
+Example: Landsat 8–9 OLI/TIRS has narrower spectral bands, higher calibration, finer radiometric resolution and geometry and better signal-to-noise parameters compared to Landsat-7 TM/ETM+. In turn, aerial photographs enable to enlarge target regions.
+\end{alertblock}
+
+\begin{block}{Example}
+\emph{Multispectral Satellite Image Analysis for Computing Vegetation Indices by R in the Khartoum Region of Sudan, Northeast Africa}, Journal of Imaging. 2023; 9(5):98: \href{https://doi.org/10.3390/jimaging9050098}{DOI: 10.3390/jimaging9050098}.
+\end{block}
+\end{frame}
+%---------------<
+
+\section{Programming}
 \subsection{Scripting and applied programming}
 \begin{frame}\frametitle{My GitHub repository with programming codes and scripts: \href{https://github.com/paulinelemenkova}{https://github.com/paulinelemenkova}}
 
@@ -374,9 +426,9 @@ High-resolution satellite images, LiDAR data and historical aerial photographs e
 	\item Proficiency in Word, Excel, Access, PowerPoint for usual document processing.
 \end{enumerate}
 \end{alertblock}
-
 \end{frame}
-
+%---------------<
+%--------------->
 \subsection{Python for data analysis, spatial and statistical modelling}
 \begin{frame}\frametitle{I use Python for spatial and statistical data analysis and modelling}
 
@@ -396,7 +448,8 @@ I use various libraries of Python for data analysis, modelling and visualization
 Example paper: \emph{Satellite Image Processing by Python and R Using Landsat 9 OLI/TIRS and SRTM DEM Data on Côte d’Ivoire, West Africa}, in: Journal of Imaging, 8(12), 317: \href{https://doi.org/10.3390/jimaging8120317}{DOI: 10.3390/jimaging8120317}.
 \end{block}
 \end{frame}
-
+%---------------<
+%--------------->
 \subsection{R language for terrain mapping}
 
 \begin{frame}\frametitle{R programming for terrain modelling (DEM, slope/aspect, relief hillshade)}
@@ -416,10 +469,28 @@ I have advanced skills in R: diverse packages for DEM modelling, satellite image
 Example of my research based on R for data analysis and modelling: \emph{Tanzania Craton, Serengeti Plain and Eastern Rift Valley: mapping of geospatial data by scripting techniques}, in: Estonian Journal of Earth Sciences, 71(2), 61--79: \href{https://doi.org/10.3176/earth.2022.05}{DOI: 10.3176/earth.2022.05}.
 \end{block}
 \end{frame}
+%---------------<
+%--------------->
+\subsection{Workflow modelling}
 
-\section{My skills in geophysics}
+\begin{frame}\frametitle{Conceptual workflow modelling for organising multiple tasks}
+\begin{alertblock}{Workflow modelling and organizational flowcharts}
+I use R packages \emph{DiagrammeR} and \emph{mermaid} for plotting workflow graphs
+\end{alertblock}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=4.5cm]{workflow_1.jpg}}
+		\hspace{1mm}
+		\subfloat {\includegraphics[width=5.8cm]{workflow_3.jpg}}
+\end{figure}
+\end{frame}
+
+%---------------<
+
+\section{Remote sensing methods in geophysics}
 \subsection{Technical skills in geophysical data processing}
-\begin{frame}\frametitle{My technical skills in geophysical data processing}
+\begin{frame}\frametitle{My technical skills in RS methods for geophysical data processing}
 
 \begin{alertblock}{Geophysical Data Analysis}
 I worked in \emph{Schmidt Institute of Physics of the Earth, RAS, Dept. of Natural Disasters, Anthropogenic Hazards and Seismicity of the Earth. Lab. of Regional Geophysics and Natural Disasters} $=>$ 
@@ -486,7 +557,7 @@ I can map cross-sections by GMT to visualise a complex sequence of terraces and 
 \end{block}
 \end{frame}
 
-\section{My skills in data science}
+\section{Data science}
 \subsection{Statistical data analysis}
 \begin{frame}\frametitle{Statistical data modelling and analysis}
 
@@ -505,30 +576,29 @@ My skills in statistical analysis include a variety of data modelling techniques
 \footnotesize{Examples of my plotting using libraries of Python and R for data analysis (here: submarine geoarchaeology analysed by cross-section profiles).}
 
 \begin{examples}{Paper:}
-\small{\emph{Statistical Analysis of the Mariana Trench geoarchaeology Using R Programming Language}, Geodesy and Cartography, 45(2), 57--84: \href{https://doi.org/10.3846/gac.2019.3785}{DOI: 10.3846/gac.2019.3785}.}
+\small{\emph{Statistical Analysis of the Mariana Trench geomorphology Using R Programming Language}, Geodesy and Cartography, 45(2), 57--84: \href{https://doi.org/10.3846/gac.2019.3785}{DOI: 10.3846/gac.2019.3785}.}
 \end{examples}
 \end{frame}
 
 \section{Publications}
-\begin{frame}\frametitle{Publications: academic contribution to the University of Valencia}
+\begin{frame}\frametitle{Publications: my experience on RS data processing reported in journals}
 
-\begin{alertblock}{I will contribute to the University of Valencia with my publications: planned co-authorship and active participation in writing papers)}
+\begin{alertblock}{I continuously publish my research on satellite image analysis}
 \small{\begin{enumerate}[\ding{213}]
 	\item I have a strong publication record and experience in publishing scientific papers. 
-	\item I have strong skills in academic writing: planning research, logical structure and organising papers, performing related tasks (literature review, flowcharts, data analysis, visualization and mapping, description of results). Advanced skills in \alert{\LaTeX}
-	\item The most of my journal articles are published in journals indexed in \alert{Scopus/WoS} (several more are in review or accepted and will be published soon).
-	\item My papers are publicly available in open access mode on \href{https://www.researchgate.net/profile/Polina-Lemenkova-2}{ResearchGate}, \href{https://ulb.academia.edu/PolinaLemenkova}{Academia.edu}, \href{https://scholar.google.com/citations?user=As7apVQAAAAJ&hl=en}{Google Scholar} and other research-related websites with academic reputation. 
-	\item To promote papers, I retweet them in Twitter and post on Facebook. Such sharing helps to improve metrics, gain citations, attract more social feedback, and have a greater impact. 
-	\item Selected examples of my recent publications are in the end of this presentation (pp.16-17).
+	\item I have strong skills in academic writing on RS and Earth Observation topics. In my papers I report the whole process of performed research, logical structure and organising of workflow, performing related tasks (literature review on RS data processing, flowcharts, RS data analysis, visualization of the processed satellite images and mapping, description of results). 
+	\item The most of my articles are published in journals indexed in \alert{Scopus/WoS}.
+	\item My papers are publicly available in open access mode on \href{https://www.researchgate.net/profile/Polina-Lemenkova-2}{ResearchGate}, \href{https://ulb.academia.edu/PolinaLemenkova}{Academia.edu}, \href{https://scholar.google.com/citations?user=As7apVQAAAAJ&hl=en}{Google Scholar} and other research-related websites of academic and professional community. 
+	\item To promote papers, I retweet them in Twitter and LinkedIn, and post on Facebook. Sharing helps to improve metrics, gain citations, attract social feedback, and have a greater impact. 
+	\item Selected examples of my recent publications are provided in this presentation.
 \end{enumerate}}
 \end{alertblock}
 
 \begin{block}{Soft skills:}
 \small{\begin{enumerate}[\ding{91}]
-	\item Motivation for cross-disciplinary research: geophysics + remote sensing + GIS + archaeology  
+	\item Motivation for cross-disciplinary research: cartographic visualization and mapping + remote sensing + GIS + Earth Observation data  
 	\item Working in international and multi-disciplinary teams with different educational backgrounds.
-	\item Time management skills: attention to deadlines, multi-task regime, reviewers' comments.
-	\item Experienced reviewer myself (WoS ID: R-8828-2018).
+	\item Time management skills: attention to deadlines, multi-task regime, communication.
 \end{enumerate}}
 \end{block}
 \end{frame}
