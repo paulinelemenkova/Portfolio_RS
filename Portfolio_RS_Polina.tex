@@ -135,22 +135,22 @@ DEM and terrain modelling \\ Mapping and modelling EO data
 
 \section{Summary}
 
-\begin{frame}\frametitle{My software skills:}
+\begin{frame}\frametitle{My technical skills:}
 
-\begin{alertblock}{Educational background}
+\begin{alertblock}{Professional background}
 \begin{itemize}
-	\item Background in geophysics, physical geography and related fields: geoarchaeology and applied geology, triggers of land cover change, evolution of landscapes, general knowledge of soil processes;
-	\item Strong extensive experience in remote sensing data processing: satellite image classification, clustering, segmentation, analysis and interpretation;
+	\item Background in RS, image processing, applied geophysics and physical geography. Knowledge in natural sciences: applied geology, landscape analysis, geomorphology, climate-related issues, environmental analysis and monitoring.
+	\item Strong extensive experience in RS data processing: satellite image classification, clustering, segmentation, analysis and interpretation; 
+	\item Images I worked with: Landsat 7 TM/ETM+, 8-9 OLI/TIRS (NASA/USGS), Sentinel-2A (Copernicus satellite missions), VHR SPOT (Satellite Pour l’Observation de la Terre), World Imagery, Pléiades-1A and 1B products of ESA. 
 	\item Strong cartographic skills (print-quality maps, graphical plots and illustrations), aerial and satellite remote sensing.
-	\item Programming and scripting skills; console-based data processing: GRASS GIS, Generic Mapping Tools (GMT): statistical data analysis and modelling.
+	\item Programming and scripting skills; console-based RS data and image processing: GRASS GIS, Generic Mapping Tools (GMT): Python and R both for image processing and statistical analysis, modelling and visualization.
 \end{itemize}
 \end{alertblock}
 
-\begin{block}{Spatial Analysis}
+\begin{block}{Software skills}
 \begin{enumerate}[\ding{52}]
-	\item Strong practical experience in diverse GIS: QGIS, SAGA GIS, 
+	\item Strong practical experience in diverse GIS: GRASS GIS, GMT, QGIS, SAGA GIS, 
 Erdas Imagine, ENVI GIS, ArcGIS (ArcCatalog/Map/View/Globe), Idrisi, eCognition, GeoMedia.
-	\item To analyse landscape evolution, I will use my technical skills in GIS and RS.
 \end{enumerate}
 \end{block}
 \end{frame}
@@ -168,6 +168,7 @@ Using satellite images for environmental mapping as a source of geoinformation: 
 		\subfloat[Original dataset: Landsat 8-9 OLI/TIRS]{\includegraphics[width=5.2cm]{Qena_1.jpg}}
 			\hspace{1mm}
 		\subfloat[Classified scenes and color composites]{\includegraphics[width=5.2cm]{Qena_2.jpg}}
+		\vspace*{-2mm}
 \end{figure}
 
 \begin{block}{Example}
@@ -185,6 +186,7 @@ Segmentation of the image using techniques of thresholding (similarity analysis)
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=6.5cm]{fig_segm.jpg}
+	\vspace*{-3mm}
 \end{figure}
 
 \begin{alertblock}{Highlight}
@@ -239,24 +241,78 @@ The generated images reveal spatial details due to the intensity of pixels in fa
 %---------------<
 %--------------->
 \subsection{Time series analysis}
-\begin{frame}\frametitle{Time series analysis}
+\begin{frame}\frametitle{Time series analysis for mapping landscape dynamic}
 
-Creating natural or true/false color composites of an image using R to display a combination of visible Red, Green and Blue bands to the corresponding channels.
+A set of satellite images taken from the same area at different times, time series analysis supports investigating the dynamic processes in ecosystem monitoring. 
 
 \begin{figure}[H]
 	\centering
-		\subfloat {\includegraphics[width=5.0cm]{color_comp.jpg}}
+		\subfloat {\includegraphics[width=5.0cm]{Tunis_1.jpg}}
 			\hspace{1mm}
-		\subfloat {\includegraphics[width=3.2cm]{color_comp3.jpg}}
+		\subfloat {\includegraphics[width=5.0cm]{Tunis_2.jpg}}
+		\vspace*{-3mm}
 \end{figure}
 
 \begin{alertblock}{Highlight}
-The generated images reveal spatial details due to the intensity of pixels in false colour composites for water areas and sharpened view of urban areas in natural colour composites.
+Comparative analysis of images using GRASS GIS for mapping lacustrine environment in arid landscapes to evaluate the effects of seasonal fluctuations in land cover types.
 \end{alertblock}
+
+\begin{block}{Example}
+\emph{Monitoring Seasonal Fluctuations in Saline Lakes of Tunisia Using Earth Observation Data Processed by GRASS GIS}. Land. 2023; 12(11):1995. \href{https://doi.org/10.3390/land12111995}{DOI: 10.3390/land12111995}.
+\end{block}
+
+\end{frame}
+%---------------<
+%--------------->
+\subsection{Computing vegetation indices}
+\begin{frame}\frametitle{Computing Vegetation Indices (VI) using GRASS GIS}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=3.5cm]{Fig_11a.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=4.0cm]{Fig_11b.jpg}}
+		\vspace*{-2mm}
+\end{figure}
+\footnotesize{Left: code written in GRASS GIS for image analysis. Right: image classification for 2013, 2015, 2021 and 2022.}
+
+\begin{alertblock}{Highlight}
+RS data analysis for analysis of vegetation state and ecosystem monitoring, e.g., deforestation of mangrove forests. Computing VI using GRASS GIS: Normalized Difference Vegetation Index (NDVI), Atmospherically Resistant Vegetation Index (ARVI), Green Vegetation Index (GVI), Difference Vegetation Index (DVI), Perpendicular Vegetation Index (PVI), Global Environmental Monitoring Index (GEMI), Normalized Difference Water Index (NDWI), Soil Adjusted Vegetation Index (SAVI), Infrared Percentage Vegetation Index (IPVI), etc. 
+
+\end{alertblock}
+
+\begin{block}{Example}
+\emph{Computing Vegetation Indices from the Satellite Images Using GRASS GIS Scripts for Monitoring Mangrove Forests in the Coastal Landscapes of Niger Delta, Nigeria}, J. Mar. Sci. Eng., 11(4), 871: \href{https://doi.org/10.3390/jmse11040871}{DOI: 10.3390/jmse11040871}.
+\end{block}
 
 \end{frame}
 %---------------<
 
+
+
+%--------------->
+\subsection{Image classification}
+\begin{frame}\frametitle{Image classification and quality assessment}
+
+\begin{figure}[H]
+	\centering
+		\subfloat {\includegraphics[width=4.5cm]{Alg_1.jpg}}
+			\hspace{1mm}
+		\subfloat {\includegraphics[width=4.5cm]{Alg_2.jpg}}
+		\vspace*{-2mm}
+\end{figure}
+\footnotesize{Classification of pixels into 10 classes according to landscape types (coloured scenes), and computing rejection probability values with pixel classification confidence levels (monochrome images).}
+
+\begin{alertblock}{Highlight}
+RS data processing by GRASS GIS scripts for landscape analysis using k-means clustering technique. 
+\end{alertblock}
+
+\begin{block}{Example}
+\emph{A GRASS GIS Scripting Framework for Monitoring Changes in the Ephemeral Salt Lakes of Chotts Melrhir and Merouane, Algeria},  Appl. Syst. Innov. 2023, 6(4), 61; \href{https://doi.org/10.3390/asi6040061}{DOI: 10.3390/asi6040061}.
+\end{block}
+
+\end{frame}
+%---------------<
 
 
 
@@ -283,32 +339,12 @@ High-resolution satellite images, LiDAR data and historical aerial photographs e
 \begin{enumerate}
 	\item \emph{Multispectral Satellite Image Analysis for Computing Vegetation Indices by R in the Khartoum Region of Sudan, Northeast Africa}, Journal of Imaging. 2023; 9(5):98: \href{https://doi.org/10.3390/jimaging9050098}{DOI: 10.3390/jimaging9050098}.
 	\item \emph{Using open-source software GRASS GIS for analysis of the environmental patterns in Lake Chad, Central Africa}, 2023. Die Bodenkultur Journal of Land Management Food and Environment 74(1):49-64: \href{https://doi.org/10.2478/boku-2023-0005}{DOI: 110.2478/boku-2023-0005}.
-	\item \emph{Monitoring Seasonal Fluctuations in Saline Lakes of Tunisia Using Earth Observation Data Processed by GRASS GIS}. Land. 2023; 12(11):1995. \href{hhttps://doi.org/10.3390/land12111995}{10.3390/land12111995}
 
 \end{enumerate}
 }
 \end{examples}
 \end{frame}
 
-\subsection{RS data processing by GRASS GIS scripts for landscape analysis}
-\begin{frame}\frametitle{RS data processing by GRASS GIS scripts for landscape analysis}
-
-\begin{figure}[H]
-	\centering
-		\subfloat {\includegraphics[width=3.5cm]{Fig_11a.jpg}}
-			\hspace{1mm}
-		\subfloat {\includegraphics[width=4.0cm]{Fig_11b.jpg}}
-\end{figure}
-\footnotesize{Left: code written in GRASS GIS for image analysis. Right: image classification for 2013, 2015, 2021 and 2022.}
-
-\begin{alertblock}{Highlight}
-Experience in RS data analysis (Landsat 7 TM, 8-9 OLI/TIRS, Sentinel 2A, VHR SPOT, World Imagery). Examples of my research: image classification; clustering, computing vegetation indices for ecosystem monitoring. Analysis of human-environment interactions is essential for reconstructing landscape history (e.g., land cover/use changes).
-\end{alertblock}
-
-\begin{block}{Example}
-Paper: \emph{Computing Vegetation Indices from the Satellite Images Using GRASS GIS Scripts for Monitoring Mangrove Forests in the Coastal Landscapes of Niger Delta, Nigeria}, J. Mar. Sci. Eng., 11(4), 871: \href{https://doi.org/10.3390/jmse11040871}{DOI: 10.3390/jmse11040871}.
-\end{block}
-\end{frame}
 
 \section{My skills in programming}
 \subsection{Scripting and applied programming}
@@ -381,25 +417,6 @@ Example of my research based on R for data analysis and modelling: \emph{Tanzani
 \end{block}
 \end{frame}
 
-\subsection{Geomorphic cross-sections by MATLAB/Octave language}
-\begin{frame}\frametitle{MATLAB/Octave programming for geomorphological modelling}
-
-\begin{figure}[H]
-	\centering
-		\subfloat {\includegraphics[width=3.0cm]{Fig_07a.jpg}}
-			\hspace{1mm}
-		\subfloat {\includegraphics[width=5.0cm]{Fig_07b.jpg}}
-\end{figure}
-
-\begin{alertblock}{Highlight}
-Skills in MATLAB/Octave scripting languages for geomorphological modelling (slope terrace cross-section profiles), visualization of main features in complex terrane landforms.
-\end{alertblock}
-
-\begin{block}{Example}
-This example is taken from paper: \emph{AWK and GNU Octave Programming Languages Integrated with Generic Mapping Tools for Geomorphological Analysis}, in: GeoScience Engineering, 65(4), 1--22): \href{https://doi.org/10.35180/gse-2019-0020}{DOI: 10.35180/gse-2019-0020}.
-\end{block}
-\end{frame}
-
 \section{My skills in geophysics}
 \subsection{Technical skills in geophysical data processing}
 \begin{frame}\frametitle{My technical skills in geophysical data processing}
@@ -445,29 +462,6 @@ I can map 3D and perspective plots by GMT scripting for visualization of the ter
 
 \begin{block}{Example}
 \small{Full paper: \emph{Quantitative Morphometric 3D Terrain Analysis of Japan Using Scripts of GMT and R}, in: Land, 12(1), 261: \href{https://doi.org/10.3390/land12010261}{DOI: 10.3390/land12010261}.}
-\end{block}
-\end{frame}
-
-\subsection{Landslide mapping for risk assessment and hazard modelling: Austria}
-\begin{frame}\frametitle{Landslide mapping for risk assessment and hazard modelling: Austria}
-
-\begin{figure}[H]
-	\centering
-		\subfloat {\includegraphics[width=3.5cm]{Fig_13a.jpg}}
-			\hspace{1mm}
-		\subfloat {\includegraphics[width=3.5cm]{Fig_13b.jpg}}
-			\vspace{1mm}
-		\subfloat {\includegraphics[width=3.5cm]{Fig_13c.jpg}}
-\end{figure}
-\footnotesize{Examples of my mapping in ArcGIS using DEM and data on landslide distribution for risk assessment.}
-\normalsize
-
-\begin{alertblock}{Highlight}
-The study aim was to define zones at risks of landslides using data on mountain geoarchaeology and identified landslides in the Waidhofen a.d.Ybbs region, Lower Austria. We estimated economic damages caused by landslides, detected elements at risk with the 100-meter buffer area surrounding all landslides and did hazard risk mapping using ArcGIS. 
-\end{alertblock}
-
-\begin{block}{Example}
-\small{Paper: \emph{Economic Assessment of Landslide Risk for the Waidhofen a.d. Ybbs Region, Alpine Foreland, Lower Austria}, in: \nth{11} Int'l Symp. Landslides \& the \nth{2} North American Symp. Landslides \& Engineered Slopes. Protecting Society through Improved Understanding, Banff, AB, Canada (2012). Proceedings, pp. 279--285: \href{https://doi.org/10.6084/m9.figshare.7434230}{DOI: 10.6084/m9.figshare.7434230}.}
 \end{block}
 \end{frame}
 
